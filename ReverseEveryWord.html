@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+</head>
+<body>
+  <input type="text" id="inputSentence" placeholder="Enter a sentence">
+  <button onclick="reverseWords()">Reverse Words</button>
+  <p id="output"></p>
+
+  <script>
+    function reverseWords() {
+      const sentence = document.getElementById("inputSentence").value;
+      const reversedWords = sentence.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+      document.getElementById("output").textContent = reversedWords;
+    }
+  </script>
+</body>
+</html>
